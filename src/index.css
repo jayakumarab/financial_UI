@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: oklch(0.12 0.01 252.42);
+  --color-foreground: oklch(0.98 0.01 252.42);
+  --color-card: oklch(0.18 0.01 252.42);
+  --color-card-foreground: oklch(0.98 0.01 252.42);
+  --color-primary: oklch(0.63 0.18 259.42);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-secondary: oklch(0.25 0.02 252.42);
+  --color-muted: oklch(0.25 0.02 252.42);
+  --color-muted-foreground: oklch(0.65 0.02 252.42);
+  --color-accent: oklch(0.25 0.02 252.42);
+  --color-destructive: oklch(0.6 0.22 28.5);
+  --color-border: oklch(0.25 0.02 252.42);
+  --color-input: oklch(0.25 0.02 252.42);
+  --color-ring: oklch(0.63 0.18 259.42);
+
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.glass-card {
+  background: rgba(24, 24, 27, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.chart-gradient-stop-1 {
+  stop-color: var(--color-primary);
+  stop-opacity: 0.3;
+}
+
+.chart-gradient-stop-2 {
+  stop-color: var(--color-primary);
+  stop-opacity: 0;
+}
